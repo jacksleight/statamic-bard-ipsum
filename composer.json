@@ -1,0 +1,27 @@
+{
+    "name": "jacksleight/statamic-bard-ipsum",
+    "autoload": {
+        "psr-4": {
+            "JackSleight\\StatamicBardIpsum\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Bard Ipsum",
+            "description": "This Statamic addon ."
+        },
+        "laravel": {
+            "providers": [
+                "JackSleight\\StatamicBardIpsum\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "statamic/cms": "^3.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    }
+}
