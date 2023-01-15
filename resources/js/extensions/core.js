@@ -10,7 +10,6 @@ const Core = Extension.create({
             new InputRule({
                 find: /^lorem(\d*)(p|s|w)?\n$/,
                 handler: ({ state, range, match }) => {
-                    console.log(match);
                     const count = parseInt(match[1]);
                     const type = match[2] || 'p';
                     if (type === 'p') {

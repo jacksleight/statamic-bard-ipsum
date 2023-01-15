@@ -29,7 +29,6 @@ var Core = Extension.create({
         var state = _ref.state,
             range = _ref.range,
             match = _ref.match;
-        console.log(match);
         var count = parseInt(match[1]);
         var type = match[2] || 'p';
 
