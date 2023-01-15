@@ -28,9 +28,9 @@ composer require jacksleight/statamic-bard-ipsum --dev
 
 Just type `lorem5` and hit enter. The number is how many paragraphs you want. You can also append the following modifiers:
 
-* `lorem[n]]p` / `lorem[n]]`: Generate `n` paragraphs
-* `lorem[n]]s`: Generate `n` sentences
-* `lorem[n]]w`: Generate `n` words
+* `lorem[n]p` / `lorem[n]`: Generate `n` paragraphs
+* `lorem[n]s`: Generate `n` sentences
+* `lorem[n]w`: Generate `n` words
 
 ##  Credits
 
