@@ -8,7 +8,7 @@
     "extra": {
         "statamic": {
             "name": "Bard Ipsum",
-            "description": "This Statamic addon ."
+            "description": "This Statamic addon adds a lorem ipsum filler text generator to the Bard fieldtype."
         },
         "laravel": {
             "providers": [

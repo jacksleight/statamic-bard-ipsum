@@ -19,23 +19,33 @@ var _Statamic$$bard$tipta = Statamic.$bard.tiptap.core,
     InputRule = _Statamic$$bard$tipta.InputRule,
     generateJSON = _Statamic$$bard$tipta.generateJSON;
 var Core = Extension.create({
-  name: 'bis_core',
+  name: 'bip_core',
   addInputRules: function addInputRules() {
     var _this = this;
 
     return [new InputRule({
-      find: /^lorem(\d*)\n$/,
+      find: /^lorem(\d*)(p|s|w)?\n$/,
       handler: function handler(_ref) {
         var state = _ref.state,
             range = _ref.range,
             match = _ref.match;
+        console.log(match);
         var count = parseInt(match[1]);
-        var html = new lorem_ipsum__WEBPACK_IMPORTED_MODULE_0__.LoremIpsum({}, 'html').generateParagraphs(count).replace(/^<p>./, function (v) {
-          return v.toLowerCase();
-        }).replace(/^<p>/, '<p>Lorem ipsum ');
-        var extensions = _this.editor.extensionManager.extensions;
-        var node = state.schema.nodeFromJSON(generateJSON(html, extensions));
-        state.tr.replaceWith(range.from - 1, range.to, node.content);
+        var type = match[2] || 'p';
+
+        if (type === 'p') {
+          var html = new lorem_ipsum__WEBPACK_IMPORTED_MODULE_0__.LoremIpsum({}, 'html').generateParagraphs(count);
+          var extensions = _this.editor.extensionManager.extensions;
+          var node = state.schema.nodeFromJSON(generateJSON(html, extensions));
+          state.tr.replaceWith(range.from - 1, range.to, node.content);
+        } else if (type === 's') {
+          var text = new lorem_ipsum__WEBPACK_IMPORTED_MODULE_0__.LoremIpsum({}, 'plain').generateSentences(count);
+          state.tr.insertText(text, range.from, range.to);
+        } else if (type === 'w') {
+          var _text = new lorem_ipsum__WEBPACK_IMPORTED_MODULE_0__.LoremIpsum({}, 'plain').generateWords(count);
+
+          state.tr.insertText(_text, range.from, range.to);
+        }
       }
     })];
   }
