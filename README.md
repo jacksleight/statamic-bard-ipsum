@@ -34,7 +34,7 @@ Just type `lorem5` and hit enter. The number is how many paragraphs you want. Yo
 
 ##  Credits
 
-This addon is entirely dependant on the awesome [lorem-ipsum](https://github.com/knicklabs/lorem-ipsum.js) text generator package by Nickolas Kenyeres.
+This addon uses the awesome [lorem-ipsum](https://github.com/knicklabs/lorem-ipsum.js) text generator package by Nickolas Kenyeres.
 
 ## Sponsoring 
 
