@@ -19,7 +19,7 @@ var _Statamic$$bard$tipta = Statamic.$bard.tiptap.core,
     InputRule = _Statamic$$bard$tipta.InputRule,
     generateJSON = _Statamic$$bard$tipta.generateJSON;
 var Core = Extension.create({
-  name: 'bip_core',
+  name: 'bipCore',
   addInputRules: function addInputRules() {
     var _this = this;
 

@@ -3,7 +3,7 @@ const { Extension, InputRule, generateJSON } = Statamic.$bard.tiptap.core;
 
 const Core = Extension.create({
 
-    name: 'bip_core',
+    name: 'bipCore',
 
     addInputRules() {
         return [
