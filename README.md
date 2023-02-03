@@ -4,7 +4,7 @@
 ![Packagist version](https://flat.badgen.net/packagist/v/jacksleight/statamic-bard-ipsum)
 ![License](https://flat.badgen.net/github/license/jacksleight/statamic-bard-ipsum)
 
-# Statamic Bard Ipsum
+# Bard Ipsum
 
 <!-- /statamic:hide -->
 
