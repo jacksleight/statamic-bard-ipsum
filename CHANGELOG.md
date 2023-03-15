@@ -1,6 +1,6 @@
 # Changelog
 
-## NEXT ()
+## 0.2.0 ()
 
 - [new] Statamic 4 support
 - Rename core extension to camel case
