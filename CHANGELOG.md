@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.0 (2026-02-25)
+
+- Statamic 6 support
+- Dropped support for Statamic 4 & 5
+
 ## 1.0.1 (2024-05-07)
 
 - Statamic 5 support
