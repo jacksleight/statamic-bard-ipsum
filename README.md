@@ -34,6 +34,6 @@ If you're using an inline Bard field the paragraphs are joined with line breaks 
 
 This addon uses the awesome [lorem-ipsum](https://github.com/knicklabs/lorem-ipsum.js) text generator package by Nickolas Kenyeres.
 
-## Sponsoring 
+## Sponsoring
 
 This addon is open-source and completely free to use. However fixing bugs, adding features and helping users takes time and effort. If you find this addon useful and would like to support its development a [one-time or monthly contribution](https://github.com/sponsors/jacksleight) would be greatly appreciated. Thanks! 🙂
