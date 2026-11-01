@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.1 (2026-11-02)
+- [fix] Paragraphs dropped in inline fields
+- [fix] Caret position after generating paragraphs
+- [fix] Newline left in the text by Backspace after a trigger
+- [fix] `lorem0` inserting nothing or a random amount
+
 ## 2.0.0 (2026-02-25)
 
 - Statamic 6 support
