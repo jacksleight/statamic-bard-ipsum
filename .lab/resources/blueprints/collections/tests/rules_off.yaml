@@ -1,0 +1,26 @@
+title: Rules Off
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+      required: true
+      validate:
+        - required
+  -
+    handle: summary
+    field:
+      type: text
+      display: Summary
+  -
+    handle: content
+    field:
+      type: bard
+      display: Content
+      remove_empty_nodes: false
+      enable_input_rules: false
+      buttons:
+        - h2
+        - bold
+        - italic

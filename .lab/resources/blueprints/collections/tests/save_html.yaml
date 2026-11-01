@@ -1,0 +1,25 @@
+title: Save HTML
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+      required: true
+      validate:
+        - required
+  -
+    handle: summary
+    field:
+      type: text
+      display: Summary
+  -
+    handle: content
+    field:
+      type: bard
+      display: Content
+      save_html: true
+      buttons:
+        - h2
+        - bold
+        - italic

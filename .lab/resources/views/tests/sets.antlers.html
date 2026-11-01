@@ -1,0 +1,17 @@
+{{ partial:heading }}
+
+{{ partial:panel heading="Content &middot; rendered" }}
+    <div class="content">
+        {{ content }}
+            {{ if type == "text" }}
+                {{ text }}
+            {{ elseif type == "note" }}
+                <aside class="note">{{ text }}</aside>
+            {{ /if }}
+        {{ /content }}
+    </div>
+{{ /partial:panel }}
+
+{{ partial:panel heading="Content &middot; source" }}
+    <pre class="overflow-x-auto font-mono text-xs/relaxed whitespace-pre-wrap text-zinc-600">{{ content }}{{ if type == "text" }}{{ text | sanitize }}{{ elseif type == "note" }}[set: note, {{ text }}]&#10;{{ /if }}{{ /content }}</pre>
+{{ /partial:panel }}

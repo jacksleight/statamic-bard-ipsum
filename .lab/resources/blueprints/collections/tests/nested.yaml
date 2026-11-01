@@ -1,0 +1,37 @@
+title: Nested
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+      required: true
+      validate:
+        - required
+  -
+    handle: summary
+    field:
+      type: text
+      display: Summary
+  -
+    handle: blocks
+    field:
+      type: replicator
+      display: Blocks
+      sets:
+        main:
+          display: Main
+          sets:
+            text:
+              display: Text
+              fields:
+                -
+                  handle: body
+                  field:
+                    type: bard
+                    display: Body
+                    remove_empty_nodes: false
+                    buttons:
+                      - h2
+                      - bold
+                      - italic

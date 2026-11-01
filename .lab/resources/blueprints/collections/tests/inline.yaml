@@ -1,0 +1,34 @@
+title: Inline
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+      required: true
+      validate:
+        - required
+  -
+    handle: summary
+    field:
+      type: text
+      display: Summary
+  -
+    handle: content
+    field:
+      type: bard
+      display: Inline
+      inline: true
+      buttons:
+        - bold
+        - italic
+  -
+    handle: breaks
+    field:
+      type: bard
+      display: 'Inline with line breaks'
+      inline: true
+      inline_hard_breaks: true
+      buttons:
+        - bold
+        - italic
