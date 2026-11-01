@@ -1,5 +1,6 @@
 {
     "name": "jacksleight/statamic-bard-ipsum",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "JackSleight\\StatamicBardIpsum\\": "src"
