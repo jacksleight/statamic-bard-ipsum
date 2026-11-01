@@ -1,5 +1,6 @@
 {
     "name": "jacksleight/statamic-bard-ipsum",
+    "description": "Generate lorem ipsum paragraphs, sentences or words in the Bard fieldtype by simply typing a shortcut.",
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -9,7 +10,7 @@
     "extra": {
         "statamic": {
             "name": "Bard Ipsum",
-            "description": "This Statamic addon adds a lorem ipsum filler text generator to the Bard fieldtype."
+            "description": "Generate lorem ipsum paragraphs, sentences or words in the Bard fieldtype by simply typing a shortcut."
         },
         "laravel": {
             "providers": [
