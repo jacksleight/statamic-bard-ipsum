@@ -28,7 +28,7 @@ Just type `lorem5` and hit enter. The number is how many paragraphs you want. Yo
 * `lorem[n]s`: Generate `n` sentences
 * `lorem[n]w`: Generate `n` words
 
-##  Credits
+## Credits
 
 This addon uses the awesome [lorem-ipsum](https://github.com/knicklabs/lorem-ipsum.js) text generator package by Nickolas Kenyeres.
 
