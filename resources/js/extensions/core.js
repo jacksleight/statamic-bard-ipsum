@@ -12,7 +12,7 @@ export default (tiptap) => {
         addInputRules() {
             return [
                 new InputRule({
-                    find: /^lorem(\d+)(p|s|w)?\n$/,
+                    find: /^lorem([1-9]\d*)(p|s|w)?\n$/,
                     undoable: false,
                     handler: ({ state, range, match, commands }) => {
                         const count = parseInt(match[1]);

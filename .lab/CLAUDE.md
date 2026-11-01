@@ -6,7 +6,7 @@ Herd parks `~/Packages`, so the site answers on http://statamic-bard-ipsum--lab.
 
 ## What the addon is
 
-One tiptap extension, `bipCore`, added to every Bard field in the control panel. It is a single InputRule, `/^lorem(\d+)(p|s|w)?\n$/` in the package's `resources/js/extensions/core.js`, which fires when Enter is pressed at the end of a textblock whose text is `loremN`. `p` or no suffix replaces the block with N paragraphs and leaves the caret at the end of the last one; where the parent cannot hold several paragraphs (an inline Bard) it puts them in the line instead, joined by hard breaks when the field has them and by spaces when it does not. `s` and `w` replace the trigger with N plain-text sentences or words. There is no PHP beyond the service provider and nothing on the front end, so **the test surface is the control panel**: type, press Enter, save, then check the entry's page for what was stored.
+One tiptap extension, `bipCore`, added to every Bard field in the control panel. It is a single InputRule, `/^lorem([1-9]\d*)(p|s|w)?\n$/` in the package's `resources/js/extensions/core.js`, which fires when Enter is pressed at the end of a textblock whose text is `loremN`. `p` or no suffix replaces the block with N paragraphs and leaves the caret at the end of the last one; where the parent cannot hold several paragraphs (an inline Bard) it puts them in the line instead, joined by hard breaks when the field has them and by spaces when it does not. `s` and `w` replace the trigger with N plain-text sentences or words. There is no PHP beyond the service provider and nothing on the front end, so **the test surface is the control panel**: type, press Enter, save, then check the entry's page for what was stored.
 
 **The CP assets are symlinked, not copied.** `public/vendor/statamic-bard-ipsum/build` is a relative symlink to `../../../../statamic-bard-ipsum/dist/build`, so `npm run build` in the package is live here on the next CP load. `vendor:publish --tag=statamic-bard-ipsum` would replace it with a copy; redo the symlink if that ever happens.
 
@@ -39,7 +39,7 @@ Outcomes below were found on 2026-10-30 by typing each trigger in a headless Chr
 
 Edge cases tried on the same fields, not given entries of their own:
 
-- **`lorem0` erases the trigger and inserts nothing, but `lorem0s` and `lorem0w` insert a random number of sentences or words**, because the generator treats 0 as "not given".
+- **`lorem0`.** Fixed in 2.0.1: `lorem0` erased the trigger and inserted nothing, but `lorem0s` and `lorem0w` inserted a random number of sentences or words, because the generator treats 0 as "not given". The count must now start with 1 to 9, so `lorem0` in any mode stays as typed and Enter starts a new paragraph.
 - **Backspace straight after a trigger.** Fixed in 2.0.1: tiptap's undo for input rules put back `lorem2` followed by a literal newline character inside the paragraph. The rule now opts out of that undo (`undoable: false`), so Backspace deletes one character as usual and Cmd+Z undoes the fill.
 
 Findings not marked as fixed are recorded, not fixed: bug fixes are a separate pass on the package's `main`.
