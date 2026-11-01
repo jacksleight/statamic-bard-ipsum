@@ -40,7 +40,7 @@ Outcomes below were found on 2026-10-30 by typing each trigger in a headless Chr
 Edge cases tried on the same fields, not given entries of their own:
 
 - **`lorem0` erases the trigger and inserts nothing, but `lorem0s` and `lorem0w` insert a random number of sentences or words**, because the generator treats 0 as "not given".
-- **Backspace straight after a trigger** (tiptap's undo for input rules) puts back `lorem2` followed by a literal newline character inside the paragraph, not the plain trigger. Cmd+Z undoes cleanly.
+- **Backspace straight after a trigger.** Fixed in 2.0.1: tiptap's undo for input rules put back `lorem2` followed by a literal newline character inside the paragraph. The rule now opts out of that undo (`undoable: false`), so Backspace deletes one character as usual and Cmd+Z undoes the fill.
 
 Findings not marked as fixed are recorded, not fixed: bug fixes are a separate pass on the package's `main`.
 
